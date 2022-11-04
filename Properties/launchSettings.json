@@ -1,0 +1,34 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:44577",
+      "sslPort": 44366
+    }
+  },
+  "profiles": {
+    "WebApplication2": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:7202;http://localhost:5202",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "HMFA": "https://hmfa.vault.azure.net/",
+        "AZURE_USERNAME": "igramos@CougarNet.UH.EDU",
+        "VaultUri": "https://hmfa.vault.azure.net/"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "HMFA": "https://hmfa.vault.azure.net/",
+        "AZURE_USERNAME": "igramos@CougarNet.UH.EDU",
+        "VaultUri": "https://hmfa.vault.azure.net/"
+      }
+    }
+  }
+}

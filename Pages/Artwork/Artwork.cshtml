@@ -1,0 +1,132 @@
+﻿@page
+@model HoustonMuseumFineArts.Pages.Artwork.ArtworkModel
+@{
+}
+
+<html>
+<head>
+	<title>Artwork Database</title>
+</head>
+
+
+<body>
+	<div id="search-bar">
+		<form class="search search-default">
+			<span search-icon></span>
+			<input class="search-input" autocomplete="off" id="main-search" type="search" placeholder="Search by Artist...">
+		</form>
+	</div>
+	<div class="artist-modal">
+		<form method="POST" action="/artist/add" id="art-submit-form">
+			<label>Name</label><input type="text" name="f_name">
+			<br>
+			<label>Country of Origin</label><br><input type="text" name="origin_country">
+			<br>
+			<label>Main Style</label><br><input type="text" name="main_style">
+			<br>
+			<label>Description</label><br><input type="text" name="a_description">
+			<br>
+			<input type="submit" value="submit" id="submit-artist-button" class="uk-button uk-button-danger">
+		</form>
+	</div>
+
+	<div class="submit-modal">
+		<form method="POST" action="/art/add" id="art-submit-form">
+			<label>Artist</label><br><input type="text" name="artist">
+			<br>
+			<label>Year</label><br><input type="number" name="year">
+			<br>
+			<label>Title</label><br><input type="text" name="title">
+			<br>
+			<label>Description</label><br><input type="text" name="description">
+			<br>
+			<label>Image(link)</label><br><input type="text" name="img">
+			<br>
+			<label>Type:</label><br>
+			Statue: <input type="radio" id="type-button" name="type" checked="yes" value="statue" />
+			Sculpture: <input type="radio" id="type-button" name="type" value="sculpture" />
+			Painting: <input type="radio" id="type-button" name="type" value="painting" />
+			Other: <input type="radio" id="type-button" name="type" value="other" />
+			<br>
+			<label>Origin</label><br><input type="text" name="origin">
+			<br>
+			<label>Epoch</label><br><input type="text" name="epoch">
+			<br>
+			<label>Permanent:</label><br>
+			Permanent: <input type="radio" name="permanent" checked="yes" value="0" />
+			Borrowed: <input type="radio" name="permanent" value="1" />
+			<br>
+			<div id="rest-of-form">
+				<label>Style</label><br><input type="text" name="style">
+				<br>
+				<label>Material: </label><br><input type="text" name="material">
+				<br>
+				<label>Height</label><br><input type="number" name="height">
+				<br>
+				<label>Weight</label><br><input type="number" name="weight">
+			</div>
+			<input type="submit" value="submit" id="submit-art-button" class="uk-button uk-button-danger">
+		</form>
+	</div>
+	<div class="overlay"></div>
+	<div id="side-nav-div">
+		<div id="site-icon">
+			<a href="/"><p id="icon-title">ROD</p></a>
+		</div>
+		<table class="navbar">
+			<tr>
+				<td id="submit-post">
+					<button class="uk-button uk-button-danger" id="submit-button">SUBMIT PIECE</button>
+				</td>
+			</tr>
+			<tr>
+				<td id="submit-post">
+					<button class="uk-button uk-button-danger" id="artist-button">SUBMIT ARTIST</button>
+				</td>
+			</tr>
+			<tr>
+				<td id="submit-post">
+					<button class="uk-button uk-button-primary" id="all-button">SEE ALL</button>
+				</td>
+			</tr>
+			<tr>
+				<td id="submit-post">
+					<button class="uk-button uk-button-primary" id="paintings-button">PAINTINGS</button>
+				</td>
+			</tr>
+			<tr>
+				<td id="submit-post">
+					<button class="uk-button uk-button-primary" id="statues-button">STATUES</button>
+				</td>
+			</tr>
+			<tr>
+				<td id="submit-post">
+					<button class="uk-button uk-button-primary" id="sculptures-button">SCULPTURES</button>
+				</td>
+			</tr>
+			<tr>
+				<td id="submit-post">
+					<button class="uk-button uk-button-primary" id="other-button">OTHER</button>
+				</td>
+			</tr>
+			<tr>
+				<td id="submit-post">
+					<a href="/getartists"<button class="button-primary" id="artists-button">ARTISTS</button></a>
+				</td>
+			</tr>
+			<tr><td>EXHIBITS</td></tr>
+		
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="media-display">
+	</div>
+
+
+
+
+
+
+</body>
+</html>
